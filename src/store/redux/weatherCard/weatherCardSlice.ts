@@ -19,7 +19,7 @@ export const fetchWeather = createAsyncThunk<
     return {
       id: uuidv4(),
       city: data.name,
-      temperature: `${data.main.temp}°C`,
+      temperature: `${data.main.temp}°`,
       weather_icon: `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
     };
   } catch (error: any) {

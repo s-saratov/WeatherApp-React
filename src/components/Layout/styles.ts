@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
-import { NavLink } from 'react-router-dom'
-import bgImage from "../../assets/pic-2.jpeg";
+import styled from "@emotion/styled"
+import { NavLink } from "react-router-dom"
+import bgImage from "../../assets/pic-2.jpeg"
 
 export const LayoutComponent = styled.div`
   display: flex;
@@ -20,26 +20,32 @@ export const Header = styled.header`
   align-items: center;
   width: 100%;
   height: 80px;
-  padding: 10px;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), rgba(18, 45, 77, 0.5);
+  padding-left: 70px;
+  padding-right: 70px;
+  background:
+    linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+    rgba(18, 45, 77, 0.5);
   color: white;
-  border-bottom: 1px solid #D2D2D2;
+  border-bottom: 1px solid #d2d2d2;
   backdrop-filter: blur(8.9px);
 `
 export const LogoContainer = styled.div`
- border-radius: 50%;
+  color: rgba(255, 255, 255, 1);
+  font-family: Inter, Lato, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
 `
 
 export const NavContainer = styled.nav`
- display: flex;
- gap: 25px;
+  display: flex;
+  gap: 50px;
 `
 
 export const StyledNavLink = styled(NavLink)`
- text-decoration: none;
- font-size: 20px;
- color: #000000;
- padding: 10px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+  font-size: 20px;
 `
 
 export const Main = styled.main`
@@ -50,4 +56,3 @@ export const Main = styled.main`
   width: 100%;
   min-height: calc(100vh - 80px);
 `
-

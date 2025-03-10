@@ -6,14 +6,15 @@ interface MainButtonStyledProps {
 
 export const MainButton = styled.button<MainButtonStyledProps>`
   width: 100%;
-  min-height: 70px;
+  min-height: 48px;
   outline: none;
   border: none;
-  padding: 20px;
-  background:${({ disabled }) => disabled ? '#bebec7' : '#1f27f5'};
-  border-radius: 4px;
+  padding: 12px 40px 12px 40px;
+  background:${({ disabled }) => disabled ? '#bebec7' : 'rgba(54, 120, 180, 1)'};
+  border-radius: 50px;
   color: white;
-  font-family: Lato, Geneva, Tahoma, sans-serif;
-  font-size: 16px;
+  font-family: Inter, Lato, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
   cursor: pointer;
 `

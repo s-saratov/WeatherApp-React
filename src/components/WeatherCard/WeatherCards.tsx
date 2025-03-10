@@ -1,5 +1,11 @@
 import Button from "components/Button/Button"
-import { WeatherCardWrapper, WeatherImageContainer } from "./styles"
+import {
+  CityContainer,
+  TemperatureContainer,
+  WeatherCardWrapper,
+  WeatherDataContainer,
+  WeatherImageContainer,
+} from "./styles"
 import { useSelector } from "react-redux"
 import { useAppDispatch, useAppSelector } from "store/hooks"
 import {
@@ -24,13 +30,17 @@ function WeatherCards() {
       {previousWeatherCards.length > 0 && (
         <>
           {previousWeatherCards.map(weatherCard => (
-            <WeatherCardWrapper key={weatherCard.id}>
-              <WeatherImageContainer>
-                <img src={weatherCard.weather_icon} alt="weather icon" />
-              </WeatherImageContainer>
-              <p>{weatherCard.city}</p>
-              <p>{weatherCard.temperature}</p>
-            </WeatherCardWrapper>
+                <WeatherCardWrapper key={weatherCard.id}>
+                  <WeatherDataContainer>
+                  <TemperatureContainer>
+                      {weatherCard.temperature}
+                    </TemperatureContainer>
+                    <CityContainer>{weatherCard.city}</CityContainer>
+                  </WeatherDataContainer>
+                  <WeatherImageContainer>
+                    <img src={weatherCard.weather_icon} alt="weather icon" />
+                  </WeatherImageContainer>
+                </WeatherCardWrapper>
           ))}
           <Button name="Delete all cards" onClick={handleDeleteAll} />
         </>

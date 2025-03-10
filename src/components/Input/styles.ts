@@ -14,17 +14,20 @@ export const Label = styled.label`
 
 export const InputElement = styled.input`
   width: 100%;
-  height: 50px;
-  padding: 12px;
+  height: 48px;
+  padding: 12px 12px 12px 20px;
   outline: none;
-  border: 1px solid #f5f0f0;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: white;
-  color: black; /* Добавьте эту строку для установки цвета текста */
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #FFFFFF;
+  backdrop-filter: blur(8px);
+  border-radius: 40px;
+  font-family: Inter, Lato, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 1);
   
   &::placeholder {
-    color: #090808a1; /* Цвет текста плейсхолдера */
+    color: rgba(255, 255, 255, 0.7);
   }
 `;
 

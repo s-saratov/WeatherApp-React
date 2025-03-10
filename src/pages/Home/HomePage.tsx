@@ -1,4 +1,4 @@
-import { HomePageWrapper, InputWrapper, ResultContainer } from "./styles"
+import { ButtonContainer, HomePageWrapper, InputWrapper, ResultContainer } from "./styles"
 import Button from "components/Button/Button"
 import Input from "components/Input/Input"
 import { useState } from "react"
@@ -45,7 +45,9 @@ function HomePage() {
           onChange={handleInputChange}
           error={error}
         />
+        <ButtonContainer>
         <Button name="Search" onClick={handleSearch} />
+        </ ButtonContainer>
       </InputWrapper>
       <ResultContainer>
         {status === "loading" ? (
